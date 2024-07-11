@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+   <link rel="stylesheet" href="./style.css">
+   
+</head>
+<body>
+    <div class="book-shop">
+        <h1>The Book Shop</h1>
+        <div class="header">
+            <div class="view-all">
+                <button id="view-all">View All</button>
+            </div>
+        </div>
+        <div class="cards carousel">
+            <!-- 12 Book Cards -->
+            <div class="card">
+                <img src="./images/banana.png" alt="banana">
+                <h2>Banana</h2>
+                <p>₹ 1000</p>
+                <button class="add-to-cart" data-name="banana" data-price="1000">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/blackberry.jpg" alt="blackberry">
+                <h2>Blackberry</h2>
+                <p>₹ 1000</p>
+                <button class="add-to-cart" data-name="blackberry" data-price="1000">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/cessy.jpeg" alt="cessy">
+                <h2>Cessy</h2>
+                <p>₹ 5000</p>
+                <button class="add-to-cart" data-name="cessy" data-price="5000">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/cheery.jpeg" alt="cheery">
+                <h2>Cheery</h2>
+                <p>₹ 2500</p>
+                <button class="add-to-cart" data-name="cheery" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/coconut.jpeg" alt="coco">
+                <h2>Coconut</h2>
+                <p>₹ 5000</p>
+                <button class="add-to-cart" data-name="coco" data-price="5000">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/grapes.jpg" alt="grapes">
+                <h2>Grapes</h2>
+                <p>₹ 5000</p>
+                <button class="add-to-cart" data-name="Angular" data-price="5000">Add to Cart</button>
+            </div>
+            <!-- Add more cards to make it 12 -->
+            <div class="card">
+                <img src="./images/Lichi.jpeg" alt="Lichi">
+                <h2>Lichi</h2>
+                <p>₹ 1000</p>
+                <button class="add-to-cart" data-name="Lichi" data-price="1000">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/mango.jpeg" alt="mango">
+                <h2>Mango.</h2>
+                <p>₹ 1000</p>
+                <button class="add-to-cart" data-name="CSS" data-price="1000">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/papaya.jpeg" alt="papaya">
+                <h2>Papaya</h2>
+                <p>₹ 5000</p>
+                <button class="add-to-cart" data-name="JavaScript" data-price="5000">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/pear.jpeg" alt="pear">
+                <h2>Pear</h2>
+                <p>₹ 2500</p>
+                <button class="add-to-cart" data-name="pear" data-price="2500">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/ananas.jpeg" alt="ananas">
+                <h2>Ananas</h2>
+                <p>₹ 5000</p>
+                <button class="add-to-cart" data-name="React" data-price="5000">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="./images/watermelon.jpg" alt="watermelon">
+                <h2>Watermelon</h2>
+                <p>₹ 5000</p>
+                <button class="add-to-cart" data-name="watermelon" data-price="5000">Add to Cart</button>
+            </div>
+        </div>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Items: <span id="item-count">0</span></p>
+            <p>Total: ₹<span id="total-price">0</span></p>
+        </div>
+    </div>
+
+    <div id="view-all-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="all-cards">
+                <!-- Same 12 Book Cards -->
+                <div class="card">
+                    <img src="./images/banana.png" alt="banana">
+                    <h2>Banana</h2>
+                    <p>₹ 1000</p>
+                    <button class="add-to-cart" data-name="HTML" data-price="1000">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/blackberry.jpg" alt="blackberry">
+                    <h2>Blackberry</h2>
+                    <p>₹ 1000</p>
+                    <button class="add-to-cart" data-name="blackberry" data-price="1000">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/cessy.jpeg" alt="cessy">
+                    <h2>Cessy</h2>
+                    <p>₹ 5000</p>
+                    <button class="add-to-cart" data-name="JavaScript" data-price="5000">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/cheery.jpeg" alt="cheery">
+                    <h2>Cheery</h2>
+                    <p>₹ 2500</p>
+                    <button class="add-to-cart" data-name="jQuery" data-price="2500">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/coconut.jpeg" alt="coco">
+                    <h2>Coconut</h2>
+                    <p>₹ 5000</p>
+                    <button class="add-to-cart" data-name="coco" data-price="5000">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/grapes.jpg" alt="grapes">
+                    <h2>Grapes</h2>
+                    <p>₹ 5000</p>
+                    <button class="add-to-cart" data-name="grapes" data-price="5000">Add to Cart</button>
+                </div>
+                <!-- Add more cards to make it 12 -->
+                <div class="card">
+                    <img src="./images/Lichi.jpeg" alt="Lichi">
+                    <h2>Lichi</h2>
+                    <p>₹ 1000</p>
+                    <button class="add-to-cart" data-name="Lichi" data-price="1000">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/mango.jpeg" alt="mango">
+                    <h2>Mango</h2>
+                    <p>₹ 1000</p>
+                    <button class="add-to-cart" data-name="mango" data-price="1000">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/papaya.jpeg" alt="papaya">
+                    <h2>Papaya</h2>
+                    <p>₹ 5000</p>
+                    <button class="add-to-cart" data-name="JavaScript" data-price="5000">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/pear.jpeg" alt="pear">
+                    <h2>pear</h2>
+                    <p>₹ 2500</p>
+                    <button class="add-to-cart" data-name="jQuery" data-price="2500">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/ananas.jpeg" alt="ananas">
+                    <h2>Ananas</h2>
+                    <p>₹ 5000</p>
+                    <button class="add-to-cart" data-name="React" data-price="5000">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="./images/watermelon.jpg" alt="watermelon">
+                    <h2>watermelon</h2>
+                    <p>₹ 5000</p>
+                    <button class="add-to-cart" data-name="watermelon" data-price="5000">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
